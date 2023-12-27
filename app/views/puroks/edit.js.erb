@@ -1,0 +1,8 @@
+$(".modal").find(".modal-title").text("Edit Purok")
+$(".modal").find("form").attr("action", "/puroks.<%=@purok.id%>")
+$(".modal").find("form").attr("method", "PUT")
+$(".modal").find("input#purok_name").val("<%= @purok.name%>")
+$(".modal").find("input#purok_num").val("<%= @purok.num%>")
+$(".modal").find("input#purok_current_kagawad").val("<%= @purok.current_kagawad%>")
+
+$(".modal").modal()
