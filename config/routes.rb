@@ -15,4 +15,6 @@ Rails.application.routes.draw do
       registrations: "registrations"
     }
   )
+
+  resources :puroks
 end
