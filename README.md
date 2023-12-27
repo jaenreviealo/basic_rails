@@ -23,9 +23,9 @@ Things you may want to cover:
 
 Project Setup:
 
-mkdir basic_rails
-cd basic_rails
-rvm use ruby-3.0.0@basic_rails --ruby-version --create
-rvm gemset list
-gem install rails -v 6.1.7.6
-rails new . -T --database=postgresql
+1. mkdir basic_rails
+2. cd basic_rails
+3. rvm use ruby-3.0.0@basic_rails --ruby-version --create
+4. rvm gemset list
+5. gem install rails -v 6.1.7.6
+6. rails new . -T --database=postgresql
