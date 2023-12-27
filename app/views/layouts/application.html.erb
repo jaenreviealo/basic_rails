@@ -16,10 +16,17 @@
     <%= stylesheet_link_tag "/assets/navbar" %>
   </head>
 
-  <body style="padding: 0 50px;">
-    <%= yield %>
+  <body style="padding: 20px 50px;">
     <% if user_signed_in? %>
       <%= render "shared/navbar" %>
     <% end %>
+
+    <%= render "shared/alert" %>
+
+    <div class="main-content" style="padding: 50px 0;">
+      <%= yield %>
+    </div>
+
+    <%= yield :modal %>
   </body>
 </html>
