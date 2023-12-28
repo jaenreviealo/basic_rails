@@ -3,7 +3,7 @@ class PuroksController < ApplicationController
 
   def index
     @purok = Purok.new
-    @data = Purok.order(created_at: :desc).map { |p|  [p.id, "#{p.name.titleize} #{p.num}" , 0, p.current_kagawad] }
+    @data = Purok.includes(:residents).order(created_at: :desc).map { |p|  [p.id, p.alias , p.residents.count, p.current_kagawad] }
   end
 
   def create

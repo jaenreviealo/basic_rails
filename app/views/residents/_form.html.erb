@@ -1,0 +1,30 @@
+<div class="form-group">
+  <%= f.label :first_name %><br />
+  <%= f.text_field :first_name, class: 'form-control' %>
+</div>
+<div class="form-group">
+  <%= f.label :middle_name %><br />
+  <%= f.text_field :middle_name, class: 'form-control' %>
+</div>
+<div class="form-group">
+  <%= f.label :last_name %><br />
+  <%= f.text_field :last_name, class: 'form-control' %>
+</div>
+
+<div class="form-group">
+  <%= f.label :birthdate %><br />
+  <%= f.date_field :birthdate, as: :date, value: f.object.to_s, class: 'form-control' %> 
+
+</div>
+
+<div class="form-group">
+  <%= f.label :contact_no %><br />
+  <%= f.text_field :contact_no, class: 'form-control' %>
+</div>
+
+<div class="form-group">
+  <%= f.label :purok_id %><br />
+  <%= f.select :purok_id, @purok_options, {prompt: 'Select One'}, {class: "form-control"}  %>
+</div>
+
+<%= f.submit "Save", class: 'btn btn-primary', style: "margin-top: 20px; width: 80px;"%>

@@ -1,3 +1,3 @@
 $(document).ready(function() {
-  new DataTable('#example');
+  new DataTable('#purok-table');
 });

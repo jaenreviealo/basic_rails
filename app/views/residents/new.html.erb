@@ -1,0 +1,3 @@
+<%= form_for @resident, url: residents_path(@resident), method: 'post', html: { autocomplete: :off, class: 'form col-md-5', id: 'resident-form', style: 'margin: auto;' } do |f| %>
+  <%= render partial: 'residents/form', locals: {f: f} %>
+<% end %>
