@@ -3,17 +3,14 @@
   
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav">
-      <li class="nav-item active">
+      <li class="nav-item <%='active' if controller_name == 'dashboard'%>">
         <a class="nav-link" href=<%=root_path %>>Dashboard <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Officials</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">Residents</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Purok</a>
+        <a class="nav-link <%='active' if controller_name == 'puroks'%>" href=<%=puroks_path%>>Purok</a>
       </li>
     </ul>
     <div class="nav-item dropdown">
